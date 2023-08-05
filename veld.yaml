@@ -1,0 +1,25 @@
+x-veld:
+  chain:
+    about:
+      description: "dummy veld for testing and showcasing"
+
+services:
+  veld_convert:
+    extends:
+      file: ./veld_executable_1_json_to_xml/veld.yaml
+      service: veld
+    volumes:
+      - ./veld_data_1_json/data.json:/veld/input/data.json
+      - ./tmp/data.xml:/veld/output/out.xml
+
+  veld:
+    extends:
+      file: ./veld_executable_2_validate_xml/veld.yaml
+      service: veld
+    volumes:
+      - ./tmp/data.xml:/veld/input/a/data.xml
+      - ./result.txt:/veld/output/result.txt
+    depends_on:
+      veld_convert:
+        condition: service_completed_successfully
+
