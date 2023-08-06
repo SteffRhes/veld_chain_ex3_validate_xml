@@ -6,18 +6,19 @@ x-veld:
 services:
   veld_convert:
     extends:
-      file: ./veld_executable_1_json_to_xml/veld.yaml
+      file: ./veld_dummy_executable_1_json_to_xml/veld.yaml
       service: veld
     volumes:
-      - ./veld_data_1_json/data.json:/veld/input/data.json
-      - ./tmp/data.xml:/veld/output/out.xml
+      - ./veld_dummy_data_1_json/data.json:/veld/input/data.json
+      - ./tmp/data.xml:/veld/output/data.xml
 
   veld:
     extends:
-      file: ./veld_executable_2_validate_xml/veld.yaml
+      file: ./veld_dummy_executable_2_validate_xml/veld.yaml
       service: veld
     volumes:
       - ./tmp/data.xml:/veld/input/a/data.xml
+      - ./schema.xsd:/veld/input/b/schema.xsd
       - ./result.txt:/veld/output/result.txt
     depends_on:
       veld_convert:
