@@ -19,7 +19,7 @@ services:
     volumes:
       - ./tmp/data.xml:/veld/input/a/data.xml
       - ./schema.xsd:/veld/input/b/schema.xsd
-      - ./result.txt:/veld/output/result.txt
+      - ./result.sh:/veld/output/result.sh
     depends_on:
       veld_convert:
         condition: service_completed_successfully

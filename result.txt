@@ -1,1 +1,0 @@
-valid, with xsd check
