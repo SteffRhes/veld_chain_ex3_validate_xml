@@ -1,6 +1,6 @@
-[submodule "veld_dummy_executable_3_validate_xml"]
-	path = veld_dummy_executable_3_validate_xml
-	url = git@github.com:steffres/veld_dummy_executable_3_validate_xml.git
-[submodule "veld_dummy_data_2_xml"]
-	path = veld_dummy_data_2_xml
-	url = git@github.com:steffres/veld_dummy_data_2_xml.git
+[submodule "veld_executable_ex3_validate_xml"]
+	path = veld_executable_ex3_validate_xml
+	url = git@github.com:steffres/veld_executable_ex3_validate_xml.git
+[submodule "veld_data_ex2_xml"]
+	path = veld_data_ex2_xml
+	url = git@github.com:steffres/veld_data_ex2_xml.git
