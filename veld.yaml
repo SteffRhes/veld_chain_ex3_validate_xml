@@ -1,7 +1,7 @@
 x-veld:
   chain:
     about:
-      description: "dummy veld for testing and showcasing"
+      description: "example veld for testing and showcasing"
 
 services:
   veld:
@@ -9,7 +9,7 @@ services:
       file: ./veld_executable_ex3_validate_xml/veld.yaml
       service: veld
     volumes:
-      - ./veld_data_ex2_xml/data.xml:/veld/input/a/data.xml
-      - ./schema.xsd:/veld/input/b/schema.xsd
+      - ./veld_data_ex2_xml/data.xml:/veld/input/data.xml
+      - ./schema.xsd:/veld/input/schema.xsd
       - ./result.txt:/veld/output/result.txt
 
