@@ -2,12 +2,15 @@ x-veld:
   chain:
     about:
       description: "example veld for testing and showcasing"
+      topics: "data validation"
 
 services:
   veld:
     extends:
       file: ./veld_executable_ex3_validate_xml/veld.yaml
       service: veld
+    # note that we only have one date veld here, the other input and the output are simple files
+    # belonging into this chain veld's repo
     volumes:
       - ./veld_data_ex2_xml/data.xml:/veld/input/data.xml
       - ./schema.xsd:/veld/input/schema.xsd
