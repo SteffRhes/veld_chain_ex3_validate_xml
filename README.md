@@ -1,4 +1,4 @@
-A chain that uses a single **data veld** as input, and a validation **excutable veld**, the other
+A chain that uses a single **data veld** as input, and a validation **excutable veld**. The other
 input (a schema.xsd), and the output (a simple txt file for humans), are persisted directly into
 this chain.
 
